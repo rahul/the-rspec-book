@@ -76,7 +76,7 @@ guard :rspec, cmd: "bundle exec rspec" do
   end
 end
 
-guard "cucumber", :cli => '--no-profile --color --format progress --strict' do
+guard "cucumber", :cli => '--guess --no-profile --color --format progress --strict' do
   watch(%r{^features/.+\.feature$})
   watch(%r{^features/support/.+$})          { "features" }
 

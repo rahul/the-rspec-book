@@ -12,6 +12,7 @@ When(/^I sent it the greet message$/) do
   @message = @greeter.greet
 end
 
-Then(/^I should see "([^"]*)"$/) do |greeting|
-  expect(@message).to eql(greeting)
-end
+# Commented to not clash with mocked STDOUT in codebreaker tests
+# Then(/^I should see "([^"]*)"$/) do |greeting|
+#   expect(@message).to eql(greeting)
+# end
